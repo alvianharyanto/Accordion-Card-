@@ -54,6 +54,12 @@ body {
   height: 100vh;
 }
 
+@media screen and (min-width: 1224px) {
+  body {
+    overflow: hidden;
+  }
+}
+
 .container {
   width: calc(100% - 3rem);
   height: 100%;
@@ -80,6 +86,7 @@ body {
     height: 31.6rem;
     display: flex;
     margin: auto;
+    overflow: hidden;
   }
 }
 
@@ -128,6 +135,22 @@ body {
     height: auto;
     display: flex;
     flex-direction: column;
+  }
+  .card__body:hover .box {
+    transform: translateX(-37rem) translateY(10rem);
+  }
+}
+
+.card__body .box {
+  display: none;
+  position: absolute;
+}
+
+@media screen and (min-width: 1224px) {
+  .card__body .box {
+    display: block;
+    transform: translateX(-35rem) translateY(9rem);
+    transition: all .5s ease;
   }
 }
 
@@ -181,7 +204,7 @@ body {
 }
 
 .card__body .card--list .question:hover {
-  color: #f47c57;
+  color: #f47c57 !important;
 }
 
 .card__body .card--list .active {
@@ -219,11 +242,12 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: -1;
   padding: 0 1rem;
+  color: white;
+  background: black;
 }
 
 .attribution a {
-  color: #3e52a3;
+  color: turquoise;
 }
 /*# sourceMappingURL=main.css.map */

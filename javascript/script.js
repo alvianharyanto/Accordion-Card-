@@ -1,3 +1,4 @@
+// accordion show - hide effect
 var question = document.getElementsByClassName("question");
 var i, x;
 for (i = 0; i < question.length; i++) {
@@ -19,3 +20,5 @@ for (i = 0; i < question.length; i++) {
     });
 }
 question[1].click(); // aktif pertama load
+
+//

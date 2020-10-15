@@ -19,6 +19,10 @@ body {
     line-height: 1.5;
     width: 100vw;
     height: 100vh;
+
+    @include media (desktop) {
+        overflow: hidden;
+    }
 }
 
 .container {
@@ -45,6 +49,7 @@ body {
         height: 31.6rem;
         display: flex;
         margin: auto;
+        overflow: hidden;
     }
 
     &__top {
@@ -86,6 +91,22 @@ body {
             height: auto;
             display: flex;
             flex-direction: column;
+
+            &:hover .box {
+                transform: translateX(-37rem) translateY(10rem);
+            }
+        }
+
+        .box {
+            display: none;
+            position: absolute;
+
+            @include media (desktop) {
+                display: block;
+                transform: translateX(-35rem) translateY(9rem);
+                transition: all .5s ease;
+
+            }
         }
 
         >* {
@@ -134,8 +155,9 @@ body {
                 }
 
                 &:hover {
-                    color: $accent-color;
+                    color: $accent-color !important;
                 }
+
             }
 
             .active {
@@ -178,10 +200,11 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: -1;
     padding: 0 1rem;
+    color: white;
+    background: black;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: turquoise;
 }
