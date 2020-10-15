@@ -44,6 +44,7 @@ body {
     margin: 9rem auto;
     background: #fff;
     border-radius: 1rem;
+    box-shadow: 0px 15px 40px -20px #000;
 
     @include media (desktop) {
         height: 31.6rem;
