@@ -1,3 +1,4 @@
+// color
 $text-heading-color : hsl(238, 29%, 16%);
 $text-bold-color: hsl(237, 12%, 33%);
 $text-color: hsl(240, 6%, 50%);
@@ -5,3 +6,72 @@ $accent-color: hsl(14, 88%, 65%);
 $accent2-color: hsl(240, 5%, 91%);
 $gradient-color: linear-gradient(hsl(273, 75%, 66%) 0%,
     hsl(240, 73%, 65%) 100%);
+
+// media
+@mixin media ($name) {
+    @if $name==mobile {
+        @media screen and (min-width:324px) {
+            @content;
+        }
+    }
+
+    @else if $name==tablet {
+        @media screen and (min-width:724px) {
+            @content;
+        }
+    }
+
+    @else if $name==desktop {
+        @media screen and (min-width:1224px) {
+            @content;
+        }
+    }
+
+
+    @else if $name==largscreen {
+        @media screen and (min-width:1624px) {
+            @content;
+        }
+    }
+}
+
+// keyframes animation
+@keyframes up {
+    50% {
+        transform: scale(.5);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes down {
+    50% {
+        transform: scale(.5);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

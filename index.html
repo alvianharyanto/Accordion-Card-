@@ -19,7 +19,12 @@
     <article class="card">
 
       <div class="card__top">
-        <img src="./images/illustration-woman-online-mobile.svg" alt="ilustration online">
+        <picture class="illustration">
+          <source media="(min-width: 1224px)" srcset="images/illustration-woman-online-desktop.svg">
+          <source media="(min-width: 1223px)" srcset="images/bg-pattern-mobile.svg">
+          <img class="illustration" src="images/illustration-woman-online-mobile.svg" alt="ilustration online">
+        </picture>
+        <source src="images/illustration-box-desktop.svg" type="">
       </div>
 
       <div class="card__body">
@@ -30,8 +35,8 @@
 
         <!-- question 1 -->
         <div class="card--list">
-          <button id="question" class="question">How many team members can I invite?</button>
-          <div id="details" class="details">
+          <button class="question">How many team members can I invite?</button>
+          <div class="answer">
             <p>You can invite up to 2 additional users on the Free plan. There is no limit on
               team members for the Premium plan.</p>
           </div>
@@ -40,7 +45,7 @@
         <!-- question 2 -->
         <div class="card--list">
           <button class="question">What is the maximum file upload size?</button>
-          <div class="details">
+          <div class="answer">
             <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
           </div>
         </div>
@@ -48,7 +53,7 @@
         <!-- question 3 -->
         <div class="card--list">
           <button class="question">How do I reset my password?</button>
-          <div class="details">
+          <div class="answer">
             <p>Click “Forgot password” from the login page or “Change password” from your profile page.
               A reset link will be emailed to you.</p>
           </div>
@@ -57,7 +62,7 @@
         <!-- question 4 -->
         <div class="card--list">
           <button class="question">Can I cancel my subscription?</button>
-          <div class="details">
+          <div class="answer">
             <p> Yes! Send us a message and we’ll process your request no questions asked.</p>
           </div>
         </div>
@@ -65,7 +70,7 @@
         <!-- question 5 -->
         <div class="card--list">
           <button class="question">Do you provide additional support?</button>
-          <div class="details">
+          <div class="answer">
             <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
           </div>
         </div>
