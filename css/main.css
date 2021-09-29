@@ -63,6 +63,7 @@ body {
 .container {
   width: calc(100% - 3rem);
   height: 100%;
+  max-width: 25rem;
   margin: auto;
   display: flex;
 }
